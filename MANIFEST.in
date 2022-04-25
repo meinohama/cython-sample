@@ -1,1 +1,1 @@
-global-include *.pyx
+recursive-include src *.pyi *.pxd *.pyx *.h *.c

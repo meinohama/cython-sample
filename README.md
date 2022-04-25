@@ -38,3 +38,12 @@ sdist には .pyx を含めたいが、wheel には含めたくない。
 そこで、MANIFEST.in で sdist に .pyx を含めるように指定する。
 こうすると最終的な wheel パッケージは .pyx が含まれないので、パッケージをインストールした場合に .pyx が一緒にインストールされてしまうようなことがない。
 
+.pxd と .pyi は wheel パッケージにも含めたいので、`package_data` で指定する。
+
+## サブモジュールをまとめる
+
+下記の回答が大変参考になる。
+
+https://stackoverflow.com/questions/30157363/collapse-multiple-submodules-to-one-cython-extension
+
+このサンプルでは `sample.foo` と `sample.bar` を `sample.bootstrap` にまとめている。
